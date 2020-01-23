@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import HeaderInfo from "./Components/Head/Header";
-import FooterInfo from './Components/Foot/Footer';
+import HeaderInfo from "./Components/Head/Header.js";
+import FooterInfo from './Components/Foot/Footer.js';
 
 import "./App.css";
 
@@ -14,7 +14,6 @@ function App() {
       .then((result) => {
         console.log(result);
         setPic(result.data);
-        // console.log(setPic);
       })
       .catch((err) => {
         console.log('the data was not returned', err); 
@@ -28,11 +27,11 @@ function App() {
       <p>Description:  {pic.explanation}</p>
       <img src={pic.url}/>
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        {/* Read through the instructions in the README.md file to build your NASA
+        app! Have fun 🚀! */}
       </p>
 
-      {/* <FooterInfo /> */}
+      <FooterInfo />
     </div>
   );
 }
