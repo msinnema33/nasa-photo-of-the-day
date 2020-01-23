@@ -6,9 +6,9 @@ import styled from 'styled-components';
 
 import "./App.css";
 
-const description = styled.p`
-  width: 90
-
+const Description = styled.p`
+background: "lightgrey";
+font-size: .7rem;
 
 
 `;
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
      <HeaderInfo /> 
-      <p>Description:  {pic.explanation}</p>
+      <Description>Description:  {pic.explanation}</Description>
       <img src={pic.url}/>
       
       <FooterInfo />
